@@ -13,6 +13,9 @@ Now, all we do is just go to the application do the business in just minutes.<sp
 
 I welcome any suggestions/ improvements.<span>&nbsp;</span><span> &#128151;</span>
 
+The application is hosted on Netlify
+[https://formteamsforme.netlify.app/](https://formteamsforme.netlify.app/)
+
 
 
 
