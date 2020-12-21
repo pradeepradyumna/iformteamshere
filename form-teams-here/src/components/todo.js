@@ -1,4 +1,5 @@
 import React from "react";
+import "font-awesome/css/font-awesome.min.css";
 
 function todo({ text, todo, todos, setTodos }) {
   const deleteHandler = (e) => {
