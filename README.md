@@ -11,7 +11,8 @@ Hence, I thought of building a very simple and user-friendly application that wo
  
 Now, all we do is just go to the application do the business in just minutes.<span>&nbsp;</span><span> &#128513;</span>
 
-I welcome any suggestions/ improvements.
+I welcome any suggestions/ improvements.<span>&nbsp;</span><span> &#128151;</span>
+
 
 
 
