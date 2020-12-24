@@ -101,12 +101,15 @@ function App() {
       />
     );
 
-  if (teamCount > randomTodos.length)
+  if (randomTodos.length == 0 && (memberCount > 0 || teamCount > 0))
+    extrasCompo = <Message text="Oops! You don't have any participants yet" />;
+
+  if (teamCount > randomTodos.length && randomTodos.length)
     extrasCompo = (
       <Message text="Oops! The number of teams you want is more than the number of participants you have" />
     );
 
-  if (memberCount > randomTodos.length)
+  if (memberCount > randomTodos.length && randomTodos.length)
     extrasCompo = (
       <Message text="Oops! The number of members per team you want is more than the number of participants you have" />
     );
