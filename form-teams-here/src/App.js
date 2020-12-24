@@ -27,7 +27,7 @@ function App() {
   const inputTeamCountChangeHandler = (e) => {
     console.log(e.target.value);
 
-    if (e.target.value === "") {
+    if (e.target.value === "" || e.target.value == 0) {
       setMemberCount("");
       setTeamCount("");
       setExtrasCount("");
@@ -47,7 +47,7 @@ function App() {
   const inputMemberCountChangeHandler = (e) => {
     console.log(e.target.value);
 
-    if (e.target.value === "") {
+    if (e.target.value === "" || e.target.value == 0) {
       setTeamCount("");
       setMemberCount("");
       setExtrasCount("");
