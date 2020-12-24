@@ -153,8 +153,10 @@ function App() {
               />
             </div>
           </form>
-          {listCollection}
-          {extrasCompo}
+          <div className="float-container">
+            {listCollection}
+            {extrasCompo}
+          </div>
         </div>
       </div>
       <Footer />
