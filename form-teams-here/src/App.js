@@ -66,8 +66,11 @@ function App() {
 
     var tempExtrasCount = Math.floor(todos.length % tempTeamCount);
 
+    console.log("tempExtrasCount " + tempExtrasCount);
     // This is a tweak
-    if (tempTeamCount === 1) tempExtrasCount = Math.floor(todos.length - count);
+    if (tempTeamCount == 1) tempExtrasCount = Math.floor(todos.length - count);
+
+    console.log("(after if condition)tempExtrasCount " + tempExtrasCount);
 
     setExtrasCount(tempExtrasCount);
   };
@@ -95,9 +98,19 @@ function App() {
       <Message text="Oops! The number of teams you want is more than the number of participants you have" />
     );
 
+  if (memberCount > randomTodos.length)
+    extrasCompo = (
+      <Message text="Oops! The number of members per team you want is more than the number of participants you have" />
+    );
+
   for (let i = 1; i <= teamCount; i++) {
     if (teamCount > randomTodos.length) {
       console.log("Team count cannot be more than participants");
+      break;
+    }
+
+    if (memberCount > randomTodos.length) {
+      console.log("Member count cannot be more than number of participants");
       break;
     }
 
