@@ -97,7 +97,7 @@ form button:hover {
 }
 
 .float-container {
-  padding: 20px;
+  /* padding: 20px; */
   justify-content: space-around;
   display: flex;
 }
@@ -105,7 +105,7 @@ form button:hover {
 .float-child {
   width: 50%;
   float: left;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .copyright-text {
