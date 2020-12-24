@@ -162,14 +162,12 @@ function App() {
                 type="text"
                 className="todo-input"
                 onChange={inputMemberCountChangeHandler}
-                placeholder="How many members per team?"
+                placeholder="How many participants per team?"
               />
             </div>
           </form>
-          <div className="float-container">
-            {listCollection}
-            {extrasCompo}
-          </div>
+          {listCollection}
+          {extrasCompo}
         </div>
       </div>
       <Footer />
