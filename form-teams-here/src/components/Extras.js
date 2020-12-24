@@ -6,10 +6,11 @@ function Extras({ name, items }) {
   return (
     <div className="card-column">
       {/* <div className="card"> */}
-      <div
+      {/* <div
         className="notebook-editable-extras"
         style={{ backgroundColor: "#" + `${randomColor}` }}
-      >
+      > */}
+      <div className="notebook-editable-extras">
         <h4 className="notebook-editable-p">{name}</h4>
         <ul>
           {items.map((item) => (
