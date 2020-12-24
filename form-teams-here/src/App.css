@@ -349,8 +349,8 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  min-height: 2rem;
-  height: 3rem;
+  min-height: 1.5rem;
+  height: 2rem;
   background-color: rgb(14, 176, 230);
   color: white;
   text-align: center;
