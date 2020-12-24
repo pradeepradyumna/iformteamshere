@@ -14,6 +14,7 @@ function App() {
       window.removeEventListener("beforeunload", alertUser);
     };
   }, []);
+
   const alertUser = (e) => {
     e.preventDefault();
     e.returnValue = "";
@@ -24,6 +25,11 @@ function App() {
   const [memberCount, setMemberCount] = useState("");
   const [extrasCount, setExtrasCount] = useState(0);
   const listCollection = [];
+
+  useEffect(() => {
+    setExtrasCount(todos.length - teamCount * memberCount);
+  }, [todos]);
+
   const inputTeamCountChangeHandler = (e) => {
     console.log(e.target.value);
 
@@ -40,8 +46,12 @@ function App() {
     if (!isFinite(count)) count = 0;
 
     setTeamCount(count);
-    setMemberCount(Math.floor(todos.length / count));
-    setExtrasCount(todos.length % count);
+
+    var tempMemberCount = Math.floor(todos.length / count);
+
+    setMemberCount(tempMemberCount);
+    // setExtrasCount(todos.length % count);
+    setExtrasCount(todos.length - count * tempMemberCount); // BODMAS
   };
 
   const inputMemberCountChangeHandler = (e) => {
@@ -64,27 +74,25 @@ function App() {
     setMemberCount(count);
     setTeamCount(tempTeamCount);
 
-    var tempExtrasCount = Math.floor(todos.length % tempTeamCount);
+    // var tempExtrasCount = Math.floor(todos.length % tempTeamCount);
 
-    console.log("tempExtrasCount " + tempExtrasCount);
-    // This is a tweak
-    if (tempTeamCount == 1) tempExtrasCount = Math.floor(todos.length - count);
+    // if (tempTeamCount == 1) tempExtrasCount = Math.floor(todos.length - count);
 
-    console.log("(after if condition)tempExtrasCount " + tempExtrasCount);
+    // setExtrasCount(tempExtrasCount);
 
-    setExtrasCount(tempExtrasCount);
+    setExtrasCount(todos.length - tempTeamCount * count);
   };
 
   var startIndex = 0;
   var endIndex = memberCount;
 
   var randomTodos = [];
-  randomTodos.push(todos);
+  // randomTodos.push(todos);
   randomTodos = todos.sort(() => Math.random() - 0.5);
 
   var extrasCompo = "";
 
-  if (extrasCount > 0)
+  if (extrasCount > 0 && teamCount > 0 && memberCount > 0)
     extrasCompo = (
       <Extras
         key={`key-${extrasCount}`}
