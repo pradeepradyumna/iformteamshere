@@ -24,7 +24,6 @@ function App() {
   const [memberCount, setMemberCount] = useState("");
   const [extrasCount, setExtrasCount] = useState(0);
   const listCollection = [];
-  // const [listCollection, setlistCollection] = useState([]);
   const inputTeamCountChangeHandler = (e) => {
     console.log(e.target.value);
 
@@ -135,25 +134,23 @@ function App() {
 
         <div className="float-child">
           <form onSubmit={teamsSubmitHandler}>
-            <div className="float-container">
-              <div className="float-child">
-                <input
-                  value={teamCount}
-                  type="text"
-                  className="todo-input"
-                  onChange={inputTeamCountChangeHandler}
-                  placeholder="How many teams?"
-                />
-              </div>
-              <div className="float-child">
-                <input
-                  value={memberCount}
-                  type="text"
-                  className="todo-input"
-                  onChange={inputMemberCountChangeHandler}
-                  placeholder="How many members per team?"
-                />
-              </div>
+            <div className="float-child">
+              <input
+                value={teamCount}
+                type="text"
+                className="todo-input"
+                onChange={inputTeamCountChangeHandler}
+                placeholder="How many teams?"
+              />
+            </div>
+            <div className="float-child">
+              <input
+                value={memberCount}
+                type="text"
+                className="todo-input"
+                onChange={inputMemberCountChangeHandler}
+                placeholder="How many members per team?"
+              />
             </div>
           </form>
           {listCollection}
