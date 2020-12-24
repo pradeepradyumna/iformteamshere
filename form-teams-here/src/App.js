@@ -20,41 +20,84 @@ function App() {
   };
   const [inputText, setInputText] = useState("");
   const [todos, setTodos] = useState([]);
-  const [total, setTotal] = useState("");
+  const [teamCount, setTeamCount] = useState("");
+  const [memberCount, setMemberCount] = useState("");
+  const [extrasCount, setExtrasCount] = useState(0);
   const listCollection = [];
-
-  const inputChangeHandler = (e) => {
+  // const [listCollection, setlistCollection] = useState([]);
+  const inputTeamCountChangeHandler = (e) => {
     console.log(e.target.value);
-    setTotal(e.target.value);
+
+    if (e.target.value === "") {
+      setMemberCount("");
+      setTeamCount("");
+      setExtrasCount("");
+      return;
+    }
+
+    if (!(e.target.value > 0) && !(todos.length > 0)) return;
+
+    var count = Math.floor(e.target.value);
+    if (!isFinite(count)) count = 0;
+
+    setTeamCount(count);
+    setMemberCount(Math.floor(todos.length / count));
+    setExtrasCount(todos.length % count);
   };
 
-  const numberOfPplInTeam = Math.floor(todos.length / total);
-  const extraPplInTeam = todos.length % total;
+  const inputMemberCountChangeHandler = (e) => {
+    console.log(e.target.value);
+
+    if (e.target.value === "") {
+      setTeamCount("");
+      setMemberCount("");
+      setExtrasCount("");
+      return;
+    }
+
+    if (!(e.target.value > 0) && !(todos.length > 0)) return;
+
+    var count = Math.floor(e.target.value);
+    if (!isFinite(count)) count = 0;
+
+    var tempTeamCount = Math.floor(todos.length / count);
+
+    setMemberCount(count);
+    setTeamCount(tempTeamCount);
+
+    var tempExtrasCount = Math.floor(todos.length % tempTeamCount);
+
+    // This is a tweak
+    if (tempTeamCount === 1) tempExtrasCount = Math.floor(todos.length - count);
+
+    setExtrasCount(tempExtrasCount);
+  };
 
   var startIndex = 0;
-  var endIndex = numberOfPplInTeam;
+  var endIndex = memberCount;
 
   var randomTodos = [];
   randomTodos.push(todos);
   randomTodos = todos.sort(() => Math.random() - 0.5);
 
   var extrasCompo = "";
-  if (extraPplInTeam > 0)
+
+  if (extrasCount > 0)
     extrasCompo = (
       <Extras
-        key={`key-${extraPplInTeam}`}
+        key={`key-${extrasCount}`}
         name="Extras"
-        items={randomTodos.slice(-extraPplInTeam)}
+        items={randomTodos.slice(-extrasCount)}
       />
     );
 
-  if (total > randomTodos.length)
+  if (teamCount > randomTodos.length)
     extrasCompo = (
       <Message text="Oops! The number of teams you want is more than the number of participants you have" />
     );
 
-  for (let i = 1; i <= total; i++) {
-    if (total > randomTodos.length) {
+  for (let i = 1; i <= teamCount; i++) {
+    if (teamCount > randomTodos.length) {
       console.log("Team count cannot be more than participants");
       break;
     }
@@ -67,12 +110,8 @@ function App() {
       />
     );
     startIndex = endIndex;
-    endIndex = startIndex + numberOfPplInTeam;
+    endIndex = startIndex + memberCount;
   }
-
-  // var shuffledCompo;
-  // if (todos.length > 0)
-  //   shuffledCompo = <Shuffled name="Participants Shuffled" todos={todos} />;
 
   const teamsSubmitHandler = (e) => {
     e.preventDefault();
@@ -93,16 +132,29 @@ function App() {
           />
           <TodoList todos={todos} setTodos={setTodos} />
         </div>
-        {/* {shuffledCompo} */}
+
         <div className="float-child">
           <form onSubmit={teamsSubmitHandler}>
-            <input
-              value={total}
-              type="text"
-              className="todo-input"
-              onChange={inputChangeHandler}
-              placeholder="How many teams?"
-            />
+            <div className="float-container">
+              <div className="float-child">
+                <input
+                  value={teamCount}
+                  type="text"
+                  className="todo-input"
+                  onChange={inputTeamCountChangeHandler}
+                  placeholder="How many teams?"
+                />
+              </div>
+              <div className="float-child">
+                <input
+                  value={memberCount}
+                  type="text"
+                  className="todo-input"
+                  onChange={inputMemberCountChangeHandler}
+                  placeholder="How many members per team?"
+                />
+              </div>
+            </div>
           </form>
           {listCollection}
           {extrasCompo}
