@@ -450,3 +450,34 @@ footer {
     transform: scale(0.9);
   }
 }
+
+li {
+  position: relative;
+  display: block;
+  margin-bottom: 5px;
+  padding: 10px;
+  animation: fadeIn 0.5s linear;
+  animation-fill-mode: both;
+}
+
+/* Set delay per List Item */
+@for $i from 1 through $total-items {
+  li:nth-child(#{$i}) {
+    animation-delay: 0.25s * $i;
+  }
+}
+
+/* Keyframe animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    top: 100px;
+  }
+  75% {
+    opacity: 0.5;
+    top: 0px;
+  }
+  100% {
+    opacity: 1;
+  }
+}
