@@ -114,6 +114,12 @@ form button:hover {
   left: auto;
 }
 
+.about {
+  right: auto;
+  float: right;
+  width: 10%;
+  padding: 20px;
+}
 .my-name {
   width: 50%;
   float: right;

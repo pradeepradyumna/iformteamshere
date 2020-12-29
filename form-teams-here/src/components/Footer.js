@@ -14,6 +14,14 @@ function Footer() {
           Pradeep Pradyumna
         </a>
       </div>
+      <div className="about">
+        <a
+          href="https://dev.to/pradeepradyumna/form-teams-online-a-react-app-3a4m"
+          target="_blank"
+        >
+          About
+        </a>
+      </div>
     </footer>
   );
 }
