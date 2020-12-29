@@ -1,21 +1,47 @@
-#### [Form teams for me <span>&nbsp;</span><span> &#128512;</span>](https://formteamsforme.netlify.app/)
-We have a lot of fun activities that get conducted in our office and the creative team would send out registration forms to all employees. In turn, the team would receive a lot of participation. I being one of the members of the creative team, along with a few other members would spend a lot of time shuffling participants and adding them to the number of teams that we would want. Sometimes we would get nominations at the very nth moment and we would have to again spend time thinking where to fit them in the already created teams.
+I have built an app using React JS and hosted it over Netlify. I'm **not going to brag** about how I built this app and other technicalities, as there are just so many ReactJS tutorials available on this community already<span>&nbsp;</span><span> &#128512;</span>, BUT I'm gonna share **why I built this app** and **how it helps my folks**.
 
+## The Problem Statement<span>&nbsp;</span><span> &#128293;</span>
 
-Hence, I thought of building a very simple and user-friendly application that would do this job without any hassle. This would
-<p><span> &#9889;<span>&nbsp;</span></span> Shuffle any incoming entry automatically</p>
-<p><span> &#9889;<span>&nbsp;</span></span> Every new entry would shuffle the teams</p>
-<p><span> &#9889;<span>&nbsp;</span></span> Create teams super fast with evenly distributed participants</p>
-<p><span> &#9889;<span>&nbsp;</span></span> Removal of any participant will adjust the teams automatically</p>
-<p><span> &#9889;<span>&nbsp;</span></span> Displays the list of extra participants separately</p>
- 
-Now, all we do is just go to the application do the business in just minutes.<span>&nbsp;</span><span> &#128513;</span>
+There are a lot of fun activities and games that my company organizes on various occasions and being a part of the creative team:
+* We send out registration forms to all employees across the company
+* In turn, we get a lot of nominations
+* We calculate on a total of how many teams that we can have out so many participation received/ how many teams can we form for a specific count of participation in a team.
 
-I welcome any suggestions/ improvements.<span>&nbsp;</span><span> &#128151;</span>
+> *For example: Suppose we have received 60 nominations*
+* *if we need 15 teams, how can we equally distribute 60 participants in 15 teams. How many extras (participants left out) would we get.*
+>* *if we want 12 participants in one team, how many teams could we form, and how many would be the extras*  
 
-The application is hosted on Netlify
-[https://formteamsforme.netlify.app/](https://formteamsforme.netlify.app/)
+* We then have to form teams where we ensure that participants are equally distributed and shuffled at the same time in different teams.
+* Sometimes we get nominations at the very last moment, and we try to fit that new participant in a team and end up reorganizing teams.
+* The same process goes on if any participant backs out after all team formations are done.
 
+And this whole task of forming teams is just so time-consuming.
+<p><span>&nbsp;</span><span> &#128530;</span><span> &#128530;</span><span> &#128530;</span></p>
 
+Hence, I decided to build an app for this to speed up the process.
 
+## The Solution<span>&nbsp;</span><span> &#9749;</span>
+I built a very user-friendly app that would have simple UI controls to
+* Add/ Remove participants
+* An input field that takes in the number of teams to create?
+* An input field that takes in the number of participants per team?
+<p><span> &#128526;</span><span> &#128526;</span><span> &#128526;</span></p>
 
+https://formteamsforme.netlify.app/
+
+I built this app using React JS and hosted it over Netlify to achieve CI/ CD in no time.
+
+## The Advantages<span>&nbsp;</span><span> &#128513;</span>
+<span> &#9889;<span>&nbsp;</span></span>Now anybody can form teams easily in minutes
+<span> &#9889;<span>&nbsp;</span></span>Shuffling participants is no big deal
+<span> &#9889;<span>&nbsp;</span></span>Teams shuffle for every new entry/ removal of participants 
+<span> &#9889;<span>&nbsp;</span></span>Any addition/ removal of participants, teams adjust automatically
+<span> &#9889;<span>&nbsp;</span></span>Get extras i.e. the list participants who fall out of teams 
+<span> &#9889;<span>&nbsp;</span></span>Out of all, it is super fast, super easy and fun to create teams. So much time is saved!
+
+## Yet to be done
+I have some styling and alignment issues pending, which I'm working on. But do let me know if there's anything you like and needs to be added/ improved in the app. I'm all ears.
+
+The Github link for this application is available [here](https://github.com/pradeepradyumna/iformteamshere)
+
+Thank you for reading!<span>&nbsp;</span><span> &#9996;</span>
