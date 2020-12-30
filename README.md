@@ -29,6 +29,8 @@ I built a very user-friendly app that would have simple UI controls to
 
 https://formteamsforme.netlify.app/
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1ff5d442-f367-48cd-ad9d-75210dcf6083/deploy-status)](https://app.netlify.com/sites/formteamsforme/deploys)
+
 I built this app using React JS and hosted it over Netlify to achieve CI/ CD in no time.
 
 ## The Advantages<span>&nbsp;</span><span> &#128513;</span>
