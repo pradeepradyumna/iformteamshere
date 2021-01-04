@@ -1,4 +1,5 @@
 import React from "react";
+import SocialShare from "./SocialShare";
 function Footer() {
   return (
     <footer>
@@ -21,6 +22,9 @@ function Footer() {
         >
           About
         </a>
+      </div>
+      <div>
+        <SocialShare />
       </div>
     </footer>
   );
