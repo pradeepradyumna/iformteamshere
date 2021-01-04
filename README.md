@@ -13,7 +13,7 @@ There are a lot of fun activities and games that my company organizes on various
 * We calculate on a total of how many teams that we can have out so many participation received/ how many teams can we form for a specific count of participation in a team.
 
 > *For example: Suppose we have received 60 nominations*
-* *if we need 15 teams, how can we equally distribute 60 participants in 15 teams. How many extras (participants left out) would we get.*
+> *if we need 15 teams, how can we equally distribute 60 participants in 15 teams. How many extras (participants left out) would we get.*
 >* *if we want 12 participants in one team, how many teams could we form, and how many would be the extras*  
 
 * We then have to form teams where we ensure that participants are equally distributed and shuffled at the same time in different teams.
