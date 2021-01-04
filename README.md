@@ -1,3 +1,5 @@
+![](https://komarev.com/ghpvc/?username=pradeepradyumna&style=flat-square)
+
 I have built an app using React JS and hosted it over Netlify. I'm **not going to brag** about how I built this app and other technicalities, as there are just so many ReactJS tutorials available on this community already<span>&nbsp;</span><span> &#128512;</span>, BUT I'm gonna share **why I built this app** and **how it helps my folks**.
 
 ## The Problem Statement<span>&nbsp;</span><span> &#128293;</span>
