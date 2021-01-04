@@ -1,4 +1,6 @@
 ![](https://komarev.com/ghpvc/?username=pradeepradyumna&style=flat-square)
+The content was orginally written on [DEV forum](https://dev.to/pradeepradyumna/form-teams-online-a-react-app-3a4m)
+
 
 I have built an app using React JS and hosted it over Netlify. I'm **not going to brag** about how I built this app and other technicalities, as there are just so many ReactJS tutorials available on this community already<span>&nbsp;</span><span> &#128512;</span>, BUT I'm gonna share **why I built this app** and **how it helps my folks**.
 
