@@ -111,7 +111,7 @@ function App() {
 
   if (memberCount > randomTodos.length && randomTodos.length)
     extrasCompo = (
-      <Message text="Oops! The number of members per team you want is more than the number of participants you have" />
+      <Message text="Oops! The number of participants per team you want is more than the number of participants you have" />
     );
 
   for (let i = 1; i <= teamCount; i++) {
