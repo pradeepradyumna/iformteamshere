@@ -1,6 +1,6 @@
-![](https://komarev.com/ghpvc/?username=pradeepradyumna&style=flat-square)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1ff5d442-f367-48cd-ad9d-75210dcf6083/deploy-status)](https://app.netlify.com/sites/formteams/deploys)
 
-> The content was orginally written on [DEV forum](https://dev.to/pradeepradyumna/form-teams-online-a-react-app-3a4m) which I have simply duplicated here.
+> The content was orginally written on [DEV forum](https://dev.to/pradeepradyumna/form-teams-online-a-react-app-3a4m) 
 
 
 I have built an app using React JS and hosted it over Netlify. I'm **not going to brag** about how I built this app and other technicalities, as there are just so many ReactJS tutorials available on this community already<span>&nbsp;</span><span> &#128512;</span>, BUT I'm gonna share **why I built this app** and **how it helps my folks**.
@@ -33,8 +33,6 @@ I built a very user-friendly app that would have simple UI controls to
 <p><span> &#128526;</span><span> &#128526;</span><span> &#128526;</span></p>
 
 https://formteamsforme.netlify.app/
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1ff5d442-f367-48cd-ad9d-75210dcf6083/deploy-status)](https://app.netlify.com/sites/formteamsforme/deploys)
 
 I built this app using React JS and hosted it over Netlify to achieve CI/ CD in no time.
 
